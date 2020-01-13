@@ -1,0 +1,133 @@
+<mat-card>
+<form [formGroup]="service.formModel" autocomplete="off" (submit)="onSubmit()"  class="example-form">
+
+    <div class="form-group required">
+
+
+      <mat-form-field appearance="outline">
+        <mat-label>SKU</mat-label>
+        <input matInput placeholder= "SKU"  formControlName="SKU">
+
+        <mat-hint class="text-danger" *ngIf="service.formModel.get('SKU').touched && service.formModel.get('SKU').errors?.required">This field is mandatory.</mat-hint>
+    </mat-form-field>
+
+    </div>
+    <div class="form-group">
+
+      <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+      <input matInput placeholder="title" formControlName="title">
+      <mat-hint class="text-danger" *ngIf="service.formModel.get('title').touched && service.formModel.get('title').errors?.email">Invalid email address.</mat-hint>
+    </mat-form-field>
+
+    </div>
+    <div class="form-group">
+        <mat-form-field appearance="outline">
+            <mat-label>Brand</mat-label>
+
+      <input matInput placeholder="brand"  formControlName="brand">
+    </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+          <mat-label>Producer</mat-label>
+
+    <input matInput placeholder="producer"  formControlName="producer">
+  </mat-form-field>
+  </div>
+  <div class="form-group">
+    <mat-form-field appearance="outline">
+        <mat-label>Short Details</mat-label>
+
+  <input matInput placeholder="shortDetails"  formControlName="shortDetails">
+</mat-form-field>
+</div>
+<div class="form-group">
+  <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+
+<input matInput placeholder="description"  formControlName="description">
+</mat-form-field>
+</div>
+<div class="form-group">
+  <mat-form-field appearance="outline">
+      <mat-label>catagory</mat-label>
+
+<input matInput placeholder="catagory_id" type="number"  formControlName="catagory_id">
+</mat-form-field>
+</div>
+<div class="form-group">
+  <mat-form-field appearance="outline">
+      <mat-label>Sub Catagory</mat-label>
+
+<input matInput placeholder="subCategory_id" type="number"  formControlName="subCategory_id">
+</mat-form-field>
+</div>
+<div class="form-group">
+  <mat-form-field appearance="outline">
+      <mat-label>Sub Sub Catagory</mat-label>
+
+<input matInput placeholder=  "subSubCategory_id" type="number"  formControlName=  "subSubCategory_id">
+</mat-form-field>
+</div>
+<div class="form-group">
+  <mat-form-field appearance="outline">
+      <mat-label>Product Status</mat-label>
+
+<input matInput placeholder="product_status"  formControlName="product_status">
+</mat-form-field>
+</div>
+<div class="form-group">
+  <mat-form-field appearance="outline">
+      <mat-label>Updated</mat-label>
+
+<input matInput [matDatepicker]="picker" placeholder="updated"  formControlName="updated">
+<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+</div>
+
+<div class="form-group">
+  <mat-form-field appearance="outline">
+      <mat-label>Product Currency</mat-label>
+
+<input matInput placeholder="product_Currency"  formControlName="product_Currency">
+</mat-form-field>
+</div>
+<div class="form-group">
+  <mat-form-field appearance="outline">
+      <mat-label>Price id</mat-label>
+
+<input matInput placeholder="price_id" type="number"  formControlName="price_id">
+</mat-form-field>
+</div>
+<div class="form-group">
+  <mat-form-field appearance="outline">
+      <mat-label>Stock</mat-label>
+
+<input matInput placeholder="stock" type="number"  formControlName="stock">
+</mat-form-field>
+</div>
+<div class="form-group">
+  <mat-form-field appearance="outline">
+      <mat-label>Images</mat-label>
+
+<input matInput placeholder="images"  formControlName="images">
+</mat-form-field>
+</div>
+<div class="form-group">
+  <mat-form-field appearance="outline">
+      <mat-label>Created</mat-label>
+
+<input matInput placeholder="created" formControlName="created">
+</mat-form-field>
+</div>
+  
+    <div class="form-row">
+      <div class="form-group col-md-8 offset-md-2">
+        <button mat-raised-button type="submit" class="btn btn-lg btn-block" >Sign Up</button>
+      </div>
+    </div>
+
+  </form>
+</mat-card>
