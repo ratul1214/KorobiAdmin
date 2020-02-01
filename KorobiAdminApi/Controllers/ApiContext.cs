@@ -14,5 +14,13 @@ namespace Newweb.Controllers
             // "MyTasteDatabase": "Server=DESKTOP-K0O55OV\\SQLEXPRESS;Database=TasteDatabase;Trusted_Connection=True;"
         }
         public DbSet<Product> product { get; set; }
+
+        public DbSet<Product_Category> product_category { get; set; }
+        
+        public DbSet<Product_subCategory> Product_subCategory { get; set; }
+        public DbSet<Product_subSubCategory> Product_subSubCategory { get; set; }
+        public DbSet<Newweb.Models.Product_Price> Product_Price { get; set; }
+        public DbSet<Newweb.Models.PublisherList> PublisherList { get; set; }
+        public DbSet<Newweb.Models.WriterList> WriterList { get; set; }
     }
 }

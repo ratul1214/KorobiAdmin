@@ -79,6 +79,7 @@ namespace Newweb.Controllers
         [HttpPost]
         public async Task<ActionResult<Product>> PostProduct(Product product)
         {
+
             _context.product.Add(product);
             try
             {
