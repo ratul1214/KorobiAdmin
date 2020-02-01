@@ -13,7 +13,9 @@ import { RegistrationComponent } from './user/registration/registration.componen
 import { UserService } from './user.service';
 import {MatInputModule} from '@angular/material/input';
 import {MatDatepickerModule} from '@angular/material/datepicker';
-
+import {MatSelectModule} from '@angular/material/select';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +35,9 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatFormFieldModule,
     MatDatepickerModule,
     MatNativeDateModule,
+    MatSelectModule,
+    MatAutocompleteModule,
+    FlexLayoutModule
     
 
   ],
